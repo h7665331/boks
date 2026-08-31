@@ -244,7 +244,14 @@
                         "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788090337.pdf"
                     }
                 ],
-                "الـــــدراســــــــــــــــــــــــــــــــــــــــــــات": [
+                "الــريـــاضـــــــــــــــــــــــــــــــــــــــــيات": [
+                    {
+                        "title": "مذكرة رياضيات عالمنهج كامل",
+                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788144705.pdf"
+                    }
+                ],
+                "الإنــجلـيــزي الثـــــــــــــــــــــــــقافي": [],
+                "الدراســــــــــــــــــــــــات": [
                     {
                         "title": "تلخيص منهج دراسات كامل",
                         "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788145991.pdf"
@@ -305,14 +312,7 @@
                         "title": "حل كتاب الدراسات ٢",
                         "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788152815.pdf"
                     }
-                ],
-                "الــريـــاضـــــــــــــــــــــــــــــــــــــــــيات": [
-                    {
-                        "title": "مذكرة رياضيات عالمنهج كامل",
-                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788144705.pdf"
-                    }
-                ],
-                "الإنــجلـيــزي الثـــــــــــــــــــــــــقافي": []
+                ]
             }
         }
     },
