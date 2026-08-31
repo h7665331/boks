@@ -253,10 +253,21 @@
             font-size: 0.85rem;
             font-weight: 700;
             box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .download-btn:hover {
+        .download-btn:hover:not(:disabled) {
             transform: scale(1.05);
+        }
+        
+        .download-btn:disabled {
+            opacity: 0.7;
+            cursor: wait;
         }
 
         .contact-section {
@@ -362,7 +373,6 @@
                 const response = await fetch('data.json?t=' + new Date().getTime());
                 globalData = await response.json();
                 
-                // تحديث العناوين من الـ json إذا كان موجود فيها
                 if(globalData.site_name) {
                    document.getElementById('page-title').innerText = globalData.site_name;
                    document.getElementById('nav-brand').innerText = globalData.site_name;
@@ -373,7 +383,6 @@
                     document.getElementById('main-desc').innerText = globalData.site_description;
                 }
 
-                // تطبيق خلفية الموقع المخصصة لو البوت رفعها
                 if (globalData.background_image) {
                     document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('${globalData.background_image}')`;
                 }
@@ -438,10 +447,15 @@
                 } else {
                     booksHtml = '<div class="books-grid">';
                     books.forEach(book => {
+                        // تنظيف الاسم من علامات التنصيص عشان الكود ميضربش
+                        const safeTitle = book.title.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+                        
                         booksHtml += `
                             <div class="book-item">
                                 <span>${book.title}</span>
-                                <a href="${book.file_url}" target="_blank" download class="download-btn"><i class="fa-solid fa-download"></i> تحميل</a>
+                                <button onclick="forceDownload('${book.file_url}', '${safeTitle}', this)" class="download-btn">
+                                    <i class="fa-solid fa-download"></i> تحميل
+                                </button>
                             </div>
                         `;
                     });
@@ -454,6 +468,42 @@
                 `;
                 container.appendChild(subBox);
             });
+        }
+
+        // دالة سحرية لتحميل الملف بالاسم العربي الأصلي
+        async function forceDownload(url, title, btnElement) {
+            const originalText = btnElement.innerHTML;
+            // تغيير شكل الزرار أثناء التحميل
+            btnElement.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري...';
+            btnElement.disabled = true;
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error("Network error");
+                
+                const blob = await response.blob();
+                const blobUrl = window.URL.createObjectURL(blob);
+                
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = blobUrl;
+                // إجبار المتصفح على تسمية الملف بالاسم الجميل ده
+                a.download = title + '.pdf'; 
+                
+                document.body.appendChild(a);
+                a.click();
+                
+                window.URL.revokeObjectURL(blobUrl);
+                document.body.removeChild(a);
+            } catch (error) {
+                console.error('Download failed:', error);
+                // لو حصل مشكلة يفتح الرابط عادي
+                window.open(url, '_blank');
+            }
+            
+            // إرجاع الزرار لحالته
+            btnElement.innerHTML = originalText;
+            btnElement.disabled = false;
         }
 
         function showHome() {
