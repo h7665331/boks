@@ -180,16 +180,6 @@
         },
         "تلخيصات أولى ثانوي": {
             "subjects": {
-                "التربية الإســــــــــــــــــــــــــــلامية": [
-                    {
-                        "title": "تلخيص دين محلول",
-                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788089867.pdf"
-                    },
-                    {
-                        "title": "حل كتاب الدين",
-                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788090337.pdf"
-                    }
-                ],
                 "اللغــــــة العـــــــــــــــــــــــــــــــــــــربية": [
                     {
                         "title": "تلخيص أول ٣ وحدات عربي",
@@ -250,7 +240,17 @@
                         "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788144705.pdf"
                     }
                 ],
-                "الدراســــــــــــــــــــــــــــــــــــــــــــات": []
+                "الدراســــــــــــــــــــــــــــــــــــــــــــات": [],
+                "الـتـربيـــة الإســــــــــــــــــــــــــــلامية": [
+                    {
+                        "title": "تلخيص دين محلول",
+                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788089867.pdf"
+                    },
+                    {
+                        "title": "حل كتاب الدين",
+                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788090337.pdf"
+                    }
+                ]
             }
         }
     },
