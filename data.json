@@ -184,7 +184,12 @@
         },
         "تلخيصات أولى ثانوي": {
             "subjects": {
-                "اللغة العربية": []
+                "اللغة العربية": [
+                    {
+                        "title": "تلخيص أول 3 وحدات عربي",
+                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788228927.pdf"
+                    }
+                ]
             }
         }
     },
