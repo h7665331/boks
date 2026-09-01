@@ -248,7 +248,12 @@
                         "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788232697.pdf"
                     }
                 ],
-                "حاسب آلي": []
+                "حاسب آلي": [
+                    {
+                        "title": "مذكرة حاسب آلي",
+                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788234166.pdf"
+                    }
+                ]
             }
         }
     },
