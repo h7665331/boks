@@ -238,7 +238,12 @@
                         "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788231669.pdf"
                     }
                 ],
-                "تربية إسلامية": []
+                "تربية إسلامية": [
+                    {
+                        "title": "تلخيص تربية إسلامية",
+                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788232663.pdf"
+                    }
+                ]
             }
         }
     },
