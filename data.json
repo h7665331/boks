@@ -282,7 +282,12 @@
                         "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788245300.pdf"
                     }
                 ],
-                "الرياضيات": []
+                "الرياضيات": [
+                    {
+                        "title": "مذكرة رياضيات",
+                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1788246290.pdf"
+                    }
+                ]
             }
         }
     },
