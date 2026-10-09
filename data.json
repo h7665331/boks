@@ -91,7 +91,12 @@
         },
         "تالتة ثانوي": {
             "subjects": {
-                "مواد تمريضية": [],
+                "مواد تمريضية": [
+                    {
+                        "title": "obs&gyn theroy",
+                        "file_url": "https://raw.githubusercontent.com/h7665331/boks/main/books/book_1791565579.pdf"
+                    }
+                ],
                 "مواد طبية": [],
                 "مواد ثقافية": []
             }
